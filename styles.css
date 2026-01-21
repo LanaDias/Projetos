@@ -171,3 +171,75 @@ footer {
     text-align: center;
     margin-top: 120px;
 }
+
+/* AJUSTES DE RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    
+    /* Ajuste do Header para empilhar ou reduzir espaço */
+    .header section {
+        flex-direction: column; /* Logo acima do texto */
+        gap: 10px;
+        padding: 1rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Ajuste do conteúdo principal */
+    .conteudo {
+        margin-top: 160px; /* Mais espaço por causa do header maior */
+        padding: 0 1rem;
+    }
+
+    .conteudo p, .icone-rede {
+        font-size: 1rem;
+        padding: 18px 20px;
+        width: 90%; /* Ocupa quase toda a largura em telas pequenas */
+        max-width: 400px;
+    }
+
+    /* Esconder colunas extras do fundo animado para não poluir o visual */
+    .column:nth-child(n+3) {
+        display: none;
+    }
+
+    .column {
+        width: 80px;
+    }
+
+    .column img {
+        width: 70px;
+    }
+
+    /* Grid de 'Como Funciona' */
+    .como-funciona {
+        grid-template-columns: 1fr; /* Uma coluna por linha no celular */
+        padding: 0 2rem;
+        margin: 40px auto;
+    }
+
+    /* Rodapé */
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajuste extra para telas muito pequenas (iPhone SE, etc) */
+@media screen and (max-width: 380px) {
+    .header p {
+        font-size: 0.9rem;
+    }
+    
+    .icone-rede {
+        flex-direction: column; /* Ícone em cima do texto se necessário */
+        text-align: center;
+    }
+}
