@@ -50,7 +50,7 @@ section {
 }
 
 .header p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #f1f1f1;
     opacity: 0.9;
 }
@@ -96,7 +96,7 @@ section {
 
 .conteudo p {
     display: inline-block;
-    padding: 14px 24px;
+    padding: 24px 24px;
     background: linear-gradient(135deg, #ffcc00, #ff9900);
     color: #2b1a00;
     font-size: 1.1rem;
@@ -113,7 +113,7 @@ section {
     justify-content: center;
     gap: 12px;
 
-    padding: 14px 24px;
+    padding: 24px 24px;
     background: linear-gradient(135deg, #ffcc00, #ff9900);
     color: #2b1a00;
     font-size: 1.1rem;
@@ -170,4 +170,33 @@ footer {
     background: linear-gradient(180deg, rgb(32, 6, 57), rgb(23, 1, 44));
     text-align: center;
     margin-top: 120px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 140px;
+    }
+
+    .container-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .marquee-wrapper .column:nth-child(4),
+    .marquee-wrapper .column:nth-child(5),
+    .marquee-wrapper .column:nth-child(6) {
+        display: none;
+    }
+
+    .icone-rede {
+        margin: 50px auto;
+        padding: 20px;
+        font-size: 1rem;
+    }
 }
